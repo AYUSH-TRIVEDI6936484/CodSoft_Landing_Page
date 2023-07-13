@@ -3,6 +3,7 @@ body {
     /* background-color: #fda3b2; */
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -12,12 +13,17 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #3254bb;
     color: #fff;
     /* padding: 20px 0; */
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    transition: 0.5s all linear;
+    /* background: scroll; */
 }
 
-header .container{
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +31,7 @@ header .container{
 
 .logo {
     margin: 0;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
 }
 
@@ -45,18 +51,23 @@ header .container{
     text-decoration: none;
 }
 
+.menu a:hover{
+    color: #ad103f;
+    transition: 0.3s all linear;
+}
+
 #hero {
-    background-image: url('pic.jpg');
+    background-image: url('https://images.unsplash.com/photo-1477348188230-3b118ccff845?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 200px 0;
+    padding: 164px 0;
 }
 
-.hero-title {
+/* .hero-title {
     color: #fff;
-    font-size: 48px;
-}
+    font-size: 20px;
+} */
 
 .hero-description {
     color: #fff;
@@ -87,7 +98,7 @@ header .container{
     border-radius: 4px;
 }
 
-.cta-button:hover{
+.cta-button:hover {
     background-color: #ad103f;
     transition: all 0.3s linear;
 }
@@ -98,31 +109,16 @@ header .container{
     margin-bottom: 20px;
 }
 
-.feature {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.feature i {
-    font-size: 32px;
-    margin-right: 10px;
-    color: #e6e5e5;
-}
-
-.feature h3 {
-    font-size: 24px;
-    color: #333;
-}
-
-.feature p {
-    color: #f5f4f4;
-}
-
 #pricing {
-    background-image: url("image.jpg");
-    background-color: #fc8be9;
+    background-image: url('https://images.unsplash.com/photo-1528074529665-982494e88f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-color: #d6dced;
+    background-position: center;
+    background-size: cover;
     padding: 80px 0;
+}
+
+#pricing .section-title{
+    color: #fff;
 }
 
 .pricing-item {
@@ -174,4 +170,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+#hero h1{
+    letter-spacing: 5px;
+}
+
+#hero p{
+    font-size: 3.5em;
 }
